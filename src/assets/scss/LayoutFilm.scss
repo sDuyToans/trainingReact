@@ -1,0 +1,30 @@
+.film-container{
+    background: url(../img/avanger.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: right bottom;
+    header{
+        .navbar{
+            background-color: rgba(255,0,255,0.2) !important;
+        }
+    }
+    .render-movie{
+        margin: 50px 50px 0 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 60px;
+        .card{
+            img{
+                height: 300px;
+            }
+            .card-body{
+                .card-title{
+
+                }
+                .card-text{
+
+                }
+            }
+        }
+    }
+}
