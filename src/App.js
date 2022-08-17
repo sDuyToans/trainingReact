@@ -53,15 +53,18 @@ function App() {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown
+                Redux
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
-                <a className="dropdown-item" href="#">
-                  Action 1
-                </a>
-                <a className="dropdown-item" href="#">
-                  Action 2
-                </a>
+                <NavLink className="dropdown-item" to='/demonumber'>
+                  Demo Number
+                </NavLink>
+                <NavLink className="dropdown-item" to='/demochonxe'>
+                  Demo Chon Xe
+                </NavLink>
+                <NavLink className="dropdown-item" to='/demoformcomment'>
+                  Demo Form Comment
+                </NavLink>
               </div>
             </li>
           </ul>

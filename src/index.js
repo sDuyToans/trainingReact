@@ -10,11 +10,17 @@ import About from './pages/About/About';
 import ReactForm from './pages/ReactForm/ReactForm';
 import Page404 from './pages/Page404/Page404';
 import ReactLifecycle from './pages/ReactLifecycle/ReactLifecycle';
-
+// Cài đặt Redux
+import { Provider } from 'react-redux';
+import { store } from './redux/configStore';
+import DemoTangGiamSL from './pages/DemoRedux/DemoTangGiamSL';
+import DemoChonXe from './pages/DemoRedux/DemoChonXe';
+import DemoFormComment from './pages/DemoRedux/DemoFormComment/DemoFormComment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
         <Routes>
           <Route path='' element={<App/>}>
             <Route index element={<Home/>}/>
@@ -24,10 +30,14 @@ root.render(
             <Route path='lifecycle' element={<ReactLifecycle/>}/>
             {/* <Route path='*' element={<Page404/>}/> */} 
             <Route path='*' element={<Navigate to=""/>}/> {/* Tự động chuyển về trang chủ */}
+            <Route path='demonumber' element={<DemoTangGiamSL/>}/>
+            <Route path='demochonxe' element={<DemoChonXe/>}/>
+            <Route path='demoformcomment' element={<DemoFormComment/>}/>
           </Route>
           
         </Routes>
   </BrowserRouter>
+  </Provider>
 );
 
 //jsx
